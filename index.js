@@ -37,7 +37,7 @@ module.exports = function(coordinates, beta, distance) {
   return function(r, s, pheromones) {
     var total = 0
     coordinates.map((point, idx) => {
-      if(idx != r) total += edge(pheromones[r][idx], distance(coordinates(r), coordinates(idx)), beta)
+      if(idx !== r) total += edge(pheromones[r][idx], distance(coordinates(r), coordinates(idx)), beta)
     })
     return edge(pheromones[r][s], distance(coordinates(r), coordinates(s)), beta) / total
   }
