@@ -16,12 +16,29 @@ var euclidean = require('euclidean')
  * @param {Array} coordinates
  * @param {Number?} beta
  * @param {Function?} distance
+ * @api public
  */
 
 module.exports = function(coordinates, beta, distance) {
   beta = beta || 2
   distance = distance || euclidean
+
+  /**
+   * Return transition rule given the index of two points
+   * as well as a matrix of pheromones for every given coordinates.
+   *
+   * @param {Number} r
+   * @param {Number} s
+   * @param {Array} pheromones
+   * @return {Number}
+   * @api private
+   */
+
   return function(r, s, pheromones) {
-    return edge(pheromone, distance(coordinates(r), coordinates(s)), beta) / ()
+    var total = 0
+    coordinates.map((point, idx) => {
+      if(idx != r) total += edge(pheromones[r][idx], distance(coordinates(r), coordinates(idx)), beta)
+    })
+    return edge(pheromones[r][s], distance(coordinates(r), coordinates(s)), beta) / total
   }
 }
