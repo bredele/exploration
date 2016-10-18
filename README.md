@@ -2,6 +2,22 @@
 
 State transition rule used by ant system also called random proportional rule.
 
+# Usage
+
+```js
+// initialize transition rule with euclidean distance
+var rule = exploration([{
+  x: 20,
+  y: 40
+}, {
+  x: 40,
+  y: 80
+}])
+
+// get rule value between point 0 and 1 with pheromones matrix
+rule(0, 1, pheromones)
+```
+
 ## License
 
 MIT License
