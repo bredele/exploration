@@ -2,7 +2,7 @@
 
 State transition rule used by ant system also called random proportional rule.
 
-# Usage
+## Usage
 
 ```js
 // initialize transition rule with euclidean distance
