@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/bredele/exploration/issues"
   },
-  "homepage": "https://github.com/bredele/exploration#readme"
+  "homepage": "https://github.com/bredele/exploration#readme",
+  "dependencies": {
+    "euclidean": "github:bredele/euclidean",
+    "short-edge": "github:bredele/short-edge"
+  }
 }
