@@ -19,9 +19,7 @@ var euclidean = require('euclidean')
  * @api public
  */
 
-module.exports = function(coordinates, beta, distance) {
-  beta = beta || 2
-  distance = distance || euclidean
+module.exports = function(coordinates, beta = 2, distance = euclidean) {
 
   /**
    * Return transition rule given the index of two points
